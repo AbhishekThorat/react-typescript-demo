@@ -1,5 +1,5 @@
 # react-typescript-demo
-reactjs + typescript + redux + webpack2.0 + styled component + babel + es 6
+reactjs + typescript + redux + webpack 3 + styled component + babel + es 6
 
  ## Steps to Run the application
  
