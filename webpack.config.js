@@ -1,54 +1,27 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var webpack = require('webpack');
+const path = require('path');
 
-var basePath = __dirname;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  context: path.join(basePath, 'src'),
+  entry: './src/index.tsx',
   resolve: {
-    extensions: ['.js', '.ts', '.tsx']
-  },
-  entry: {
-    app: './index.tsx',
-    vendor: [
-      'react',
-      'react-dom',
-      'redux',
-      'react-redux',
-      'redux-thunk',
-      'react-router-dom'
-    ],
+    extensions: ['.ts', '.tsx', '.js']
   },
   output: {
-    path: path.join(basePath, 'dist'),
-    filename: '[name].js',
+    path: path.join(__dirname, '/dist'),
+    filename: 'bundle.min.js'
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          useBabel: true,
-        },
-      },
-    ],
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    port: 8082,
-    noInfo: true,
+        loader: 'awesome-typescript-loader'
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
-      hash: true,
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest'],
-    }),
-  ],
-};
+      template: './src/index.html'
+    })
+  ]
+}
