@@ -9,7 +9,7 @@ export const PlaylistWrapper = div`
     margin: 0 auto;
 `;
 
-export const ErrorInfoPanel = CardStyle.extend`
+export const ErrorInfoPanel = styled(CardStyle)`
     padding: 20px;
     color: black;
     width: calc(100% - 40px);
