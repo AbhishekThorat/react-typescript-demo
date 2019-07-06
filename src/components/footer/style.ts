@@ -1,9 +1,8 @@
 import * as React from "react";
 import styled, { StyledFunction } from "styled-components";
+import { styledDiv } from "../../util/";
 
-const div: StyledFunction<{} & React.HTMLProps<HTMLInputElement>> = styled.div;
-
-export const FooterWrapper = div`
+export const FooterWrapper = styledDiv`
   position: fixed;
   margin-left: auto;
   margin-right: auto;
@@ -17,7 +16,7 @@ export const FooterWrapper = div`
   z-index: 2;
 `;
 
-export const FooterContent = div`
+export const FooterContent = styledDiv`
   font-size: 13px;
   font-weight: bold;
   font-style: normal;

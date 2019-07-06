@@ -1,7 +1,8 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import { bindActionCreators } from 'redux'
 import { IState } from "../../redux/reducers";
-import { fetchPlaylistAction } from "../../redux/actions/playlist";
+import { fetchPlaylist } from "../../redux/actions/playlist";
 import { PlaylistPage } from "./playlist";
 
 const mapStateToProps = (state: IState) => {
@@ -11,9 +12,7 @@ const mapStateToProps = (state: IState) => {
     })
 };
 
-const mapDispatchToProps = (dispatch) => ({
-    fetchPlaylist: () => dispatch(fetchPlaylistAction()),
-});
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchPlaylist }, dispatch);
 
 /**
  * Connect the redux store with PlaylistPage component.

@@ -1,9 +1,8 @@
 import * as React from 'react';
 import styled, { StyledFunction } from "styled-components";
+import { styledDiv } from "../../util/";
 
-const div: StyledFunction<{} & React.HTMLProps<HTMLInputElement>> = styled.div;
-
-export const ContentWrapper = div`
+export const ContentWrapper = styledDiv`
     height: calc(100vh - 145px);
     padding: 12px;
     padding-bottom: 0;

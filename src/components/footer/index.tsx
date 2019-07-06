@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FooterWrapper, FooterContent } from "./style";
-const COPY_RIGHT = "COPYRIGHT © 2017 BBC | ALL RIGHTS RESERVED.";
+import { messages } from '../../util/';
 
 /**
  * Component for footer.
@@ -11,7 +11,7 @@ export const Footer: React.StatelessComponent<{}> = () => {
   return (
     <FooterWrapper>
       <FooterContent>
-        {COPY_RIGHT}
+        {messages.COPY_RIGHT}
       </FooterContent>
     </FooterWrapper >
   );

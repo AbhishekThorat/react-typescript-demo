@@ -1,10 +1,9 @@
 import * as React from "react";
-import styled, { StyledFunction } from "styled-components";
+import styled from "styled-components";
 import { ItemWrapper as CardStyle  } from "../../components/playListItem/style";
+import { styledDiv } from "../../util";
 
-const div: StyledFunction<{} & React.HTMLProps<HTMLInputElement>> = styled.div;
-
-export const PlaylistWrapper = div`
+export const PlaylistWrapper = styledDiv`
     width: 400px;
     margin: 0 auto;
 `;

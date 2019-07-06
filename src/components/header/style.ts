@@ -1,9 +1,8 @@
 import * as React from "react";
 import styled, { StyledFunction } from "styled-components";
+import { styledDiv } from "../../util/";
 
-const div: StyledFunction<{} & React.HTMLProps<HTMLInputElement>> = styled.div;
-
-export const HeaderWrapper = div`
+export const HeaderWrapper = styledDiv`
   background-color: #686868;  
   padding: 1vh;
   top: 0;
@@ -12,7 +11,7 @@ export const HeaderWrapper = div`
   height: 50px;
 `;
 
-export const HeaderContent = div`
+export const HeaderContent = styledDiv`
   font-size: 16px;
   font-weight: bold;
   font-style: normal;

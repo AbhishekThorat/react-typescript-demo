@@ -1,9 +1,8 @@
 import * as React from "react";
 import styled, { StyledFunction, css } from "styled-components";
+import { styledDiv } from "../../util/";
 
-const div: StyledFunction<{} & React.HTMLProps<HTMLInputElement>> = styled.div;
-
-export const ItemWrapper = div`
+export const ItemWrapper = styledDiv`
     padding: .5em;
     width: 100%;
     float: left;
@@ -12,7 +11,7 @@ export const ItemWrapper = div`
     margin-bottom: 12px;
 `;
 
-export const ItemThumbnail = div`
+export const ItemThumbnail = styledDiv`
   float: left;
   height: 80px;
   width: 80px;
@@ -23,7 +22,7 @@ export const ItemThumbnail = div`
   }
 `;
 
-export const ItemContent = div`
+export const ItemContent = styledDiv`
   float: left;
   margin-left: 8px;
   width: 300px;
@@ -37,13 +36,13 @@ const commonTextProperties = css`
   letter-spacing: 0.8px;
 `;
 
-export const ItemAuthor = div`
+export const ItemAuthor = styledDiv`
   font-weight: bold;
   margin-top: 5px;
   text-transform: uppercase;
   ${commonTextProperties}
 `;
 
-export const ItemTitle = div`
+export const ItemTitle = styledDiv`
   ${commonTextProperties}
 `;

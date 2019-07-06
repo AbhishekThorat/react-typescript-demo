@@ -1,9 +1,8 @@
 import * as React from 'react';
 import styled, { StyledFunction } from "styled-components"
+import { styledDiv } from "../../util/";
 
-const div: StyledFunction<{} & React.HTMLProps<HTMLInputElement>> = styled.div
-
-export const LoaderWrapper = div`
+export const LoaderWrapper = styledDiv`
   width: 50px;
   height: 40px;
   position: absolute;

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { HeaderContent, HeaderWrapper } from "./style";
-
-const HEADER_CONTENT = "BBC RADIO";
+import { messages } from '../../util/';
 
 /**
  * Component for header.
@@ -12,7 +11,7 @@ export const Header: React.StatelessComponent<{}> = () => {
   return (
     <HeaderWrapper>
       <HeaderContent>
-        {HEADER_CONTENT}
+        {messages.HEADER_CONTENT}
       </HeaderContent>
     </HeaderWrapper >
   );
