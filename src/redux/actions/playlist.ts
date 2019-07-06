@@ -1,5 +1,5 @@
 import {actionTypes} from "../../util/constants/actionTypes";
-import { Dashboard as DashboardTyping } from "../../typings";
+import { IDashboard } from "../../typings";
 import { updateLoaderStateAction } from  "./loader";
 
 const API_BASE_PATH = "http://localhost:8081";
@@ -22,7 +22,7 @@ export const fetchPlaylistAction = () => (dispatch) => {
       })
 };
 
-const fetchPlaylistCompleted = (dashboardData: DashboardTyping) => ({
+const fetchPlaylistCompleted = (dashboardData: IDashboard) => ({
     type: actionTypes.FETCH_PLAYLIST_COMPLETED,
     payload: dashboardData
 });

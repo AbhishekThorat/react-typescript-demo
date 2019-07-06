@@ -1,10 +1,10 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { State } from "../../redux/reducers";
+import { IState } from "../../redux/reducers";
 import { fetchPlaylistAction } from "../../redux/actions/playlist";
 import { PlaylistPage } from "./playlist";
 
-const mapStateToProps = (state: State) => {
+const mapStateToProps = (state: IState) => {
     return ({
         dashboardData: state.dashboard,
         loaderState: state.loader,

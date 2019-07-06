@@ -1,4 +1,4 @@
-export interface PlaylistItem {
+export interface IPlaylistItem {
   artist: string;
   title: string;
   thumbnailUrl: string;
@@ -6,8 +6,8 @@ export interface PlaylistItem {
   imageUrl: string;
 }
 
-export interface Dashboard {
+export interface IDashboard {
     errorWhileFetchingPlaylist: boolean,
-    playlistItems: PlaylistItem[],
+    playlistItems: IPlaylistItem[],
 };
 

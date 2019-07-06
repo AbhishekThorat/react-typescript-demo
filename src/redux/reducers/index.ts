@@ -1,14 +1,14 @@
 import { combineReducers } from "redux";
-import { LoaderState, Dashboard } from "../../typings";
+import { ILoaderState, IDashboard } from "../../typings";
 import { playlistReducer } from "./playlist";
 import { loaderStateReducer } from "./loader";
 
-export interface State {
-  dashboard: Dashboard;
-  loader: LoaderState;
+export interface IState {
+  dashboard: IDashboard;
+  loader: ILoaderState;
 };
 
-export const state = combineReducers<State>({
+export const state = combineReducers<IState>({
   dashboard: playlistReducer,
   loader: loaderStateReducer,
 });

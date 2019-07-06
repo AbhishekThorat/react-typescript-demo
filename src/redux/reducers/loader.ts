@@ -1,7 +1,7 @@
 import { actionTypes } from "../../util/constants/actionTypes";
-import { LoaderState } from "../../typings";
+import { ILoaderState } from "../../typings";
 
-export const loaderStateReducer = (state: LoaderState = {isActive: false}, action) => {
+export const loaderStateReducer = (state: ILoaderState = {isActive: false}, action) => {
     switch (action.type) {
         case actionTypes.UPDATE_LOADER_STATE:
             return handleUpdateLoaderState(state, action.payload);
@@ -9,6 +9,6 @@ export const loaderStateReducer = (state: LoaderState = {isActive: false}, actio
     return state;
 };
 
-const handleUpdateLoaderState = (state: LoaderState, payload: LoaderState) => {
+const handleUpdateLoaderState = (state: ILoaderState, payload: ILoaderState) => {
     return payload;
 };

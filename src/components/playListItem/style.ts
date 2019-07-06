@@ -12,7 +12,7 @@ export const ItemWrapper = div`
     margin-bottom: 12px;
 `;
 
-export const ItemThumnail = div`
+export const ItemThumbnail = div`
   float: left;
   height: 80px;
   width: 80px;

@@ -1,17 +1,17 @@
 import * as React from "react";
-import { LoaderState, Dashboard, PlaylistItem as PlaylistItemTyping } from "../../typings";
+import { ILoaderState, IDashboard, IPlaylistItem } from "../../typings";
 import { PlaylistWrapper, ErrorInfoPanel } from "./style";
 import { Loader, PlaylistItem } from "../../components";
 
-interface Props {
-    dashboardData: Dashboard;
-    loaderState: LoaderState;
+interface IProps {
+    dashboardData: IDashboard;
+    loaderState: ILoaderState;
     fetchPlaylist(): void;
 }
 
 const SOMETHING_WENT_WRONG = "Something went wrong. Please check your network!";
 
-export class PlaylistPage extends React.Component<Props,{}> {
+export class PlaylistPage extends React.Component<IProps,{}> {
 
   public componentDidMount() {
     const { fetchPlaylist } = this.props;
@@ -44,7 +44,7 @@ export class PlaylistPage extends React.Component<Props,{}> {
    * @param playlistItems
    * @returns {any}
    */
-  renderPlaylist(playlistItems: PlaylistItemTyping[]) {
+  renderPlaylist(playlistItems: IPlaylistItem[]) {
     return (
       <PlaylistWrapper>
           {

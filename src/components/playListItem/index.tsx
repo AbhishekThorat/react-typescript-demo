@@ -1,9 +1,9 @@
 import * as React from "react";
-import { PlaylistItem as PlaylistItemTyping } from "../../typings/dashboard";
-import { ItemWrapper, ItemThumnail, ItemContent, ItemAuthor, ItemTitle } from "./style";
+import { IPlaylistItem } from "../../typings";
+import { ItemWrapper, ItemThumbnail, ItemContent, ItemAuthor, ItemTitle } from "./style";
 
-interface Props {
-  playlist: PlaylistItemTyping;
+interface IProps {
+  playlist: IPlaylistItem;
 }
 
 /**
@@ -12,12 +12,12 @@ interface Props {
  * @returns {any}
  * @constructor
  */
-export const PlaylistItem: React.StatelessComponent<Props> = ({ playlist }) => {
+export const PlaylistItem: React.StatelessComponent<IProps> = ({ playlist }) => {
   return (
     <ItemWrapper>
-      <ItemThumnail>
+      <ItemThumbnail>
         <img src={playlist.thumbnailUrl}/>
-      </ItemThumnail>
+      </ItemThumbnail>
     
       <ItemContent>
         <ItemTitle>
