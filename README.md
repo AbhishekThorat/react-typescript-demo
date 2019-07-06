@@ -1,13 +1,14 @@
 # react-typescript-demo
-reactjs + typescript + redux + webpack 4 + styled component + babel + es 6
+
+`stack used -> reactjs + typescript + redux + webpack 4 + styled component + es6 + json-server`
 
  ## Steps to Run the application
  
- - `npm install` <b>OR</b> `yarn install`
- - `npm run start` <b>OR</b> `yarn start`
+ - `yarn install` - To install all required dependencies
+ - `yarn start` - To start both client and json server
+ - `yarn start-client` - To start client side.
+ - `yarn start-server` - To start json-server (using it for mock data)
+ - `yarn test` - To execute the test suite for the application. (Currently most of test cases uses snapshot-testing)
  
- `Above commands will start both client and server application.`
- 
- `Client is running on port: 8082`
- 
- `Server is running on port: <b>8081</b>`
+ `Client is running on port: <b>8081<b>`
+ `Server is running on port: <b>8080</b>`

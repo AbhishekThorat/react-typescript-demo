@@ -6,9 +6,7 @@ import { api } from '../../util/';
 export const fetchPlaylist = () => (dispatch) => {
     dispatch(updateLoaderState(true));
     fetch(`${api.BASE_PATH}/${api.GET_PLAYLIST_API_KEY}`, {method: 'GET'})
-      .then((res: any) => {
-          return res.json()
-      })
+      .then((res: any) => res.json())
       .then((list: Array<any>) => {
           dispatch(updateLoaderState(false));
           dispatch(fetchPlaylistCompleted({playlistItems: list, errorWhileFetchingPlaylist: false}));
