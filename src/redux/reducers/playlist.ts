@@ -1,12 +1,12 @@
 import { actionTypes } from "../../util/constants/actionTypes";
-import { PlaylistItem, HomePage as HomePageTyping } from "../../typings";
+import { PlaylistItem, Dashboard as DashboardTyping } from "../../typings";
 
-const homePageInitialState = {
+const dashboardInitialState = {
     playlistItems :[],
     errorWhileFetchingPlaylist: false
 };
 
-export const homePageReducer = (state: HomePageTyping = homePageInitialState, action) => {
+export const playlistReducer = (state: DashboardTyping = dashboardInitialState, action) => {
     switch (action.type) {
         case actionTypes.FETCH_PLAYLIST_COMPLETED:
             return handleFetchMembersCompleted(state, action.payload);
@@ -16,6 +16,6 @@ export const homePageReducer = (state: HomePageTyping = homePageInitialState, ac
     return state;
 };
 
-const handleFetchMembersCompleted = (state: HomePageTyping, payload: HomePageTyping) => {
+const handleFetchMembersCompleted = (state: DashboardTyping, payload: DashboardTyping) => {
     return payload;
 };

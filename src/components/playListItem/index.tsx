@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PlaylistItem as PlaylistItemTyping } from "../../typings/homepage";
+import { PlaylistItem as PlaylistItemTyping } from "../../typings/dashboard";
 import { ItemWrapper, ItemThumnail, ItemContent, ItemAuthor, ItemTitle } from "./style";
 
 interface Props {

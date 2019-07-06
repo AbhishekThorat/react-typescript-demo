@@ -1,6 +1,6 @@
 import {actionTypes} from "../../util/constants/actionTypes";
-import { HomePage as HomePageTyping } from "../../typings";
-import {updateLoaderStateAction} from  "./updateLoaderState";
+import { Dashboard as DashboardTyping } from "../../typings";
+import { updateLoaderStateAction } from  "./loader";
 
 const API_BASE_PATH = "http://localhost:8081";
 const GET_PLAYLIST_API_KEY = "playlist";
@@ -22,7 +22,7 @@ export const fetchPlaylistAction = () => (dispatch) => {
       })
 };
 
-const fetchPlaylistCompleted = (homePageData: HomePageTyping) => ({
+const fetchPlaylistCompleted = (dashboardData: DashboardTyping) => ({
     type: actionTypes.FETCH_PLAYLIST_COMPLETED,
-    payload: homePageData
+    payload: dashboardData
 });

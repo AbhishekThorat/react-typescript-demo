@@ -1,10 +1,10 @@
 import * as React from "react";
-import { LoaderState, HomePage, PlaylistItem as PlaylistItemTyping } from "../../typings";
+import { LoaderState, Dashboard, PlaylistItem as PlaylistItemTyping } from "../../typings";
 import { PlaylistWrapper, ErrorInfoPanel } from "./style";
 import { Loader, PlaylistItem } from "../../components";
 
 interface Props {
-    homePageData: HomePage;
+    dashboardData: Dashboard;
     loaderState: LoaderState;
     fetchPlaylist(): void;
 }
@@ -60,7 +60,7 @@ export class PlaylistPage extends React.Component<Props,{}> {
   }
   
   managePlaylist() {
-    const { homePageData : {errorWhileFetchingPlaylist, playlistItems} } = this.props;
+    const { dashboardData : {errorWhileFetchingPlaylist, playlistItems} } = this.props;
     return errorWhileFetchingPlaylist && this.renderErrorInfoPanel() || this.renderPlaylist(playlistItems);
   }
 

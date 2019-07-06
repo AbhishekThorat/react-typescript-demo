@@ -1,13 +1,13 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { State } from "../../redux/reducers";
-import { fetchPlaylistAction } from "../../redux/actions/fetchPlaylist";
+import { fetchPlaylistAction } from "../../redux/actions/playlist";
 import { PlaylistPage } from "./playlist";
 
 const mapStateToProps = (state: State) => {
     return ({
-        homePageData: state.homePage,
-        loaderState: state.loaderState,
+        dashboardData: state.dashboard,
+        loaderState: state.loader,
     })
 };
 

@@ -1,14 +1,14 @@
 import { combineReducers } from "redux";
-import { LoaderState, HomePage } from "../../typings";
-import { homePageReducer } from "./homepage";
-import { loaderStateReducer } from "./loaderState";
+import { LoaderState, Dashboard } from "../../typings";
+import { playlistReducer } from "./playlist";
+import { loaderStateReducer } from "./loader";
 
 export interface State {
-  homePage: HomePage;
-  loaderState: LoaderState;
+  dashboard: Dashboard;
+  loader: LoaderState;
 };
 
 export const state = combineReducers<State>({
-  homePage: homePageReducer,
-  loaderState: loaderStateReducer,
+  dashboard: playlistReducer,
+  loader: loaderStateReducer,
 });

@@ -6,7 +6,7 @@ export interface PlaylistItem {
   imageUrl: string;
 }
 
-export interface HomePage {
+export interface Dashboard {
     errorWhileFetchingPlaylist: boolean,
     playlistItems: PlaylistItem[],
 };
