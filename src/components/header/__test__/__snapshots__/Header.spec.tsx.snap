@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing for header component 1`] = `
+<div
+  className="sc-bdVaJa esZbpe"
+>
+  <div
+    className="sc-bwzfXH PPgmw"
+  >
+    BBC RADIO
+  </div>
+</div>
+`;

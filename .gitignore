@@ -3,3 +3,5 @@ node_modules
 dist/*
 # Editor/ID generated files
 .idea/*
+coverage
+*.DS_Store
