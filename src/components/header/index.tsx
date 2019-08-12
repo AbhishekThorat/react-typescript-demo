@@ -1,5 +1,4 @@
 import * as React from "react";
-import { HeaderContent, HeaderWrapper } from "./style";
 import { messages } from '../../util/';
 
 /**
@@ -9,10 +8,10 @@ import { messages } from '../../util/';
  */
 export const Header: React.StatelessComponent<{}> = () => {
   return (
-    <HeaderWrapper>
-      <HeaderContent>
+    <div className='header-wrapper'>
+      <div className='header-wrapper__content'>
         {messages.HEADER_CONTENT}
-      </HeaderContent>
-    </HeaderWrapper >
+      </div>
+    </div>
   );
 };

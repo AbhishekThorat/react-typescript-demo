@@ -1,0 +1,8 @@
+.layout {
+    &--default {
+        height: calc(100vh - 145px);
+        padding: 12px;
+        padding-bottom: 0;
+        overflow: auto;
+    }
+}

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Header, Footer } from "../../components";
-import { ContentWrapper } from "./style";
 
 /**
  * Layout Component with header and footer support.
@@ -12,9 +11,9 @@ export const DefaultLayout: React.StatelessComponent<{}> = (props) => {
   return (
     <>
     <Header />
-    <ContentWrapper>
+    <div className='layout--default'>
       {props.children}
-    </ContentWrapper>
+    </div>
     <Footer />
     </>
   );

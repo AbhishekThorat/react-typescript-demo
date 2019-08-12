@@ -3,12 +3,10 @@ import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import { AppRouter } from './router';
-import { GlobalStyle } from './util';
-
+import './css/_root.scss';
 
 ReactDOM.render(
   <Provider store={store}>
     <AppRouter />
-    <GlobalStyle />
   </Provider>
   , document.getElementById('root'));

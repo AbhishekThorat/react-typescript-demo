@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ILoaderState, IDashboard, IPlaylistItem } from "../../typings";
-import { PlaylistWrapper, ErrorInfoPanel } from "./style";
+// import { PlaylistWrapper, ErrorInfoPanel } from "./style";
 import { Loader, PlaylistItem } from "../../components";
 import { messages } from '../../util/';
 
@@ -31,9 +31,9 @@ export class PlaylistPage extends React.Component<IProps,{}> {
    */
   renderErrorInfoPanel() {
     return(
-      <ErrorInfoPanel>
+      <div className='playlist__info-panel--error'>
         <strong>{messages.SOMETHING_WENT_WRONG}</strong>
-      </ErrorInfoPanel>
+      </div>
     )
   }
   
@@ -44,7 +44,7 @@ export class PlaylistPage extends React.Component<IProps,{}> {
    */
   renderPlaylist(playlistItems: IPlaylistItem[]) {
     return (
-      <PlaylistWrapper>
+      <div className='playlist__container'>
           {
             playlistItems.map((playlist, index) =>
               <PlaylistItem
@@ -53,7 +53,7 @@ export class PlaylistPage extends React.Component<IProps,{}> {
               />
             )
           }
-      </PlaylistWrapper>
+      </div>
     )
   }
   

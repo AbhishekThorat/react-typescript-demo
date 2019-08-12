@@ -1,0 +1,59 @@
+@mixin commonTextProperties {
+    font-size: 13px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+
+.playlist {
+    &__container {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        padding: .5em;
+        width: 100%;
+        float: left;
+        background-color: #eff0f1;
+        border-radius: 10px;
+        margin-bottom: 12px;
+
+        &__thumbnail {
+            float: left;
+            height: 80px;
+            width: 80px;
+
+            > img {
+              height: inherit;
+              width: inherit;
+              border-radius: 10px;
+            }
+        }
+
+        &__content {
+            float: left;
+            margin-left: 8px;
+            width: 300px;
+        }
+
+        &__title {
+            @include commonTextProperties;   
+        }
+
+        &__author {
+            font-weight: bold;
+            margin-top: 5px;
+            text-transform: uppercase;
+            @include commonTextProperties;
+        }
+    }
+
+    &__info-panel--error {
+        padding: 20px;
+        color: black;
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+}

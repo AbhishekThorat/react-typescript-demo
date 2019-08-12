@@ -1,6 +1,6 @@
 # react-typescript-demo
 
-`stack used -> reactjs + typescript + redux + webpack 4 + styled component + es6 + json-server + jest + enzyme`
+`stack used -> reactjs + typescript + redux + webpack 4 + scss + es6 + json-server + jest + enzyme`
 
  ## Steps to Run the application
  

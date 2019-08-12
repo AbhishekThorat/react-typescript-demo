@@ -1,6 +1,6 @@
 import * as React from "react";
 import { IPlaylistItem } from "../../typings";
-import { ItemWrapper, ItemThumbnail, ItemContent, ItemAuthor, ItemTitle } from "./style";
+// import { ItemWrapper, ItemThumbnail, ItemContent, ItemAuthor, ItemTitle } from "./style";
 
 interface IProps {
   playlist: IPlaylistItem;
@@ -14,17 +14,19 @@ interface IProps {
  */
 export const PlaylistItem: React.StatelessComponent<IProps> = ({ playlist }) => {
   return (
-    <ItemWrapper>
-      <ItemThumbnail>
+    <div className='playlist__item'>
+      <div className='playlist__item__thumbnail'>
         <img src={playlist.thumbnailUrl}/>
-      </ItemThumbnail>
+      </div>
     
-      <ItemContent>
-        <ItemTitle>
+      <div className='playlist__item__content'>
+        <div className='playlist__item__title'>
           {playlist.title}
-        </ItemTitle>
-        <ItemAuthor>{playlist.artist}</ItemAuthor>
-      </ItemContent>
-    </ItemWrapper>
+        </div>
+        <div className='playlist__item__author'>
+          {playlist.artist}
+        </div>
+      </div>
+    </div>
   );
 };

@@ -2,10 +2,10 @@
 
 exports[`Snapshot testing for header component 1`] = `
 <div
-  className="sc-bdVaJa esZbpe"
+  className="header-wrapper"
 >
   <div
-    className="sc-bwzfXH PPgmw"
+    className="header-wrapper--content"
   >
     BBC RADIO
   </div>

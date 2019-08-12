@@ -1,5 +1,4 @@
 import * as React from "react";
-import {LoaderWrapper} from "./style";
 
 /**
  * Component for loader.
@@ -8,12 +7,12 @@ import {LoaderWrapper} from "./style";
  */
 export const Loader: React.StatelessComponent<{}> = () => {
   return (
-    <LoaderWrapper>
+    <div className='loader-wrapper'>
       <div />
       <div />
       <div />
       <div />
       <div />
-    </LoaderWrapper >
+    </div>
   );
 };
