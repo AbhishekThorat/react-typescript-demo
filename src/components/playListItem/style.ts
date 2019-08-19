@@ -5,14 +5,13 @@ import { styledDiv } from "../../util/";
 export const ItemWrapper = styledDiv`
     padding: .5em;
     width: 100%;
-    float: left;
+    display: flex;
     background-color: #eff0f1;
     border-radius: 10px;
     margin-bottom: 12px;
 `;
 
 export const ItemThumbnail = styledDiv`
-  float: left;
   height: 80px;
   width: 80px;
   > img {
@@ -23,7 +22,6 @@ export const ItemThumbnail = styledDiv`
 `;
 
 export const ItemContent = styledDiv`
-  float: left;
   margin-left: 8px;
   width: 300px;
 `;
